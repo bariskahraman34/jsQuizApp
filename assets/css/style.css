@@ -10,15 +10,24 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .quiz-container{
+    opacity: 0;
     background-color: white;
     width: 600px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     border: 1px solid black;
     border-radius: 10px;
+    transition: all .3s ease;
+    transform: scale(.5);
+}
+
+.quiz-container.active{
+    opacity: 1;
+    transform: scale(1);
 }
 
 .card-header{
@@ -80,6 +89,7 @@ body{
     align-items: center;
     justify-content: space-between;
     font-size: 20px;
+    background-color: #f5f5f5;
 }
 .option{
     font-weight: bold;
@@ -102,6 +112,7 @@ body{
     background-color: #f0a500;
     padding: .3rem .6rem .3rem .6rem;
     border-radius: 5px;
+    color: white;
 }
 .next-btn{
     padding: .7rem 1.2rem .7rem 1.2rem;
@@ -117,4 +128,24 @@ body{
 
 .fa-circle-chevron-right{
     margin-left: 8px;
+}
+
+.start-btn{
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #f0a500;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%,-50%);
+}
+
+.question-number{
+    font-size: 20px;
+    font-weight: bold;
 }

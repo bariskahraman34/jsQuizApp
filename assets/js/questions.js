@@ -280,4 +280,3 @@ const questions = [
         correctAnswer: "d"
     }
 ];
-
