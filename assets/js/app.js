@@ -36,6 +36,7 @@ function startQuiz(){
     score = 0;
     startQuizBtn.style.display = "block";
     scoreContainer.style.display = "none";
+    nextBtn.style.display = "block";
     startQuizBtn.addEventListener('click',function(){
         nextBtn.setAttribute('disabled','disabled');
         finishQuizBtn.style.display = "none";
@@ -51,6 +52,16 @@ function startQuiz(){
 }
 
 function scoreResult(){
+    const scoreResultContent = document.querySelector('.score-result');
+    const restart = document.querySelector('.restart');
+    const quit = document.querySelector('.quit');
+    restart.addEventListener('click',function(){
+        startQuiz();
+    });
+    quit.addEventListener('click',function(){
+        location.reload();
+    })
+    scoreResultContent.innerText = `Toplam ${questions.length} Sorudan ${score} Doğru Cevap Verdiniz !`
     scoreContainer.style.display = "flex";
 
 }
