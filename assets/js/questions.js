@@ -22,10 +22,10 @@ const questions = [
     {
         question: "HTML5 için geçerli olan en yüksek başlık etiketi nedir?",
         answers: {
-            a: "<h5>",
-            b: "<head>",
-            c: "<heading>",
-            d: "<h1>"
+            a: "&lth5&gt",
+            b: "&lthead&gt",
+            c: "&ltheading&gt",
+            d: "&lth1&gt"
         },
         correctAnswer: "d"
     },
@@ -62,10 +62,10 @@ const questions = [
     {
         question: "Hangi HTML etiketi bir resmi belirtir?",
         answers: {
-            a: "<img>",
-            b: "<picture>",
-            c: "<figure>",
-            d: "<image>"
+            a: "&ltimg&gt",
+            b: "&ltpicture&gt",
+            c: "&ltfigure&gt",
+            d: "&ltimage&gt"
         },
         correctAnswer: "a"
     },
@@ -122,10 +122,10 @@ const questions = [
     {
         question: "Hangi HTML etiketi metin içeriğini italik yapar?",
         answers: {
-            a: "<i>",
-            b: "<italic>",
-            c: "<em>",
-            d: "<italics>"
+            a: "&lti&gt",
+            b: "&ltitalic&gt",
+            c: "&ltem&gt",
+            d: "&ltitalics&gt"
         },
         correctAnswer: "c"
     },
@@ -212,10 +212,10 @@ const questions = [
     {
         question: "HTML5 ile birlikte gelen yeni form elemanlarından biri nedir?",
         answers: {
-            a: "<form>",
-            b: "<input type='text'>",
-            c: "<canvas>",
-            d: "<datalist>"
+            a: "&ltform&gt",
+            b: "&ltinput type='text'&gt",
+            c: "&ltcanvas&gt",
+            d: "&ltdatalist&gt"
         },
         correctAnswer: "d"
     },

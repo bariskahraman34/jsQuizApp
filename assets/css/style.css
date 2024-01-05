@@ -114,7 +114,7 @@ body{
     border-radius: 5px;
     color: white;
 }
-.next-btn{
+.next-btn, .quiz-off{
     padding: .7rem 1.2rem .7rem 1.2rem;
     background-color: #151D3B;
     color: white;
@@ -124,6 +124,10 @@ body{
     flex-direction: row;
     align-items: center;
     font-size: 15px;
+}
+
+.quiz-off{
+    display: none;
 }
 
 .fa-circle-chevron-right{
