@@ -7,6 +7,7 @@ const btnText = document.querySelector('.button-text');
 const optionList = document.querySelector('.option-list');
 const finishQuizBtn = document.querySelector('.quiz-off');
 const scoreContainer = document.querySelector('.score');
+const timer = document.querySelector('.timer');
 
 let currentQuestion = 1;
 let score = 0;
@@ -67,6 +68,8 @@ function scoreResult(){
 }
 
 function getQuestions(){
+    isOptionSelected = false;
+    startCountdown();
     for (const question of questions.slice(currentQuestion-1,currentQuestion)) {
         optionList.innerHTML = "";
         const questionContent = document.querySelector('.question');
@@ -123,6 +126,7 @@ function getQuestions(){
         for (let i = 0 ; i < optionContainer.length ; i++ ) {
             // console.log(answer.key)
             optionContainer[i].addEventListener('click',function(){
+                isOptionSelected = true;
                 // console.log(optionText[i].previousElementSibling.id);
                 if(optionText[i].previousElementSibling.id == question.correctAnswer){
                     optionContainer[i].style.background = "#28a745";
@@ -139,8 +143,35 @@ function getQuestions(){
                 }
             })
         }
-
     }
 }
+
+let countdown;
+let isOptionSelected = false;
+
+function startCountdown(){
+    let timeLeft = 10;
+    countdown = setInterval(function(){
+        if(timeLeft == 0){
+            clearInterval(countdown);
+            timer.innerHTML = "Süreniz Doldu!";
+            timer.style.background = "red";
+            nextBtn.removeAttribute('disabled','disabled');
+            const optionContainer = document.querySelectorAll('.option-container');
+            for (const option of optionContainer) {
+                option.classList.add('disabled-option');
+            }
+        }else if(isOptionSelected){
+            clearInterval(countdown);
+            timeLeft = 10;
+        }else{
+            timer.innerHTML = `Kalan Süre: ${timeLeft}`;
+            timer.style.background = "#28a745";
+            timeLeft--;
+        }
+        console.log(timeLeft)
+    },1000)
+}
+
 
 startQuiz()

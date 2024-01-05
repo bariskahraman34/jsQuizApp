@@ -57,7 +57,7 @@ body{
     flex-direction: row;
     padding: .5rem;
     color: white;
-    background-color: green;
+    background-color: #28a745;
     font-size: 20px;
 }
 
@@ -207,4 +207,9 @@ body{
 .quit{
     background-color: #151D3B;
     color: white;
+}
+
+.disabled-option{
+    background-color: #EBEBE4;
+    color: #C6C6C6;
 }
