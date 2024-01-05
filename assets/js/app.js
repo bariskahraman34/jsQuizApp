@@ -137,11 +137,13 @@ function getQuestions(){
                     optionContainer[i].style.background = "#28a745";
                     icon[i].innerHTML = '<i class="fa-solid fa-check"></i>';
                     nextBtn.removeAttribute('disabled','disabled');
+                    optionContainer[i].style.color = "white";
                     score++;
                 }else{
                     optionContainer[i].style.background = "#dc3545";
                     icon[i].innerHTML = '<i class="fa-solid fa-xmark">';
                     nextBtn.removeAttribute('disabled','disabled');
+                    optionContainer[i].style.color = "white";
                 }
                 for (const option of optionContainer) {
                     option.classList.add('disabled-option');
