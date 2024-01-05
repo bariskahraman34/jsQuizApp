@@ -2,7 +2,7 @@ const questions = [
     {
         question: "JavaScript'te bir değişkeni tanımlamak için hangi anahtar kelime kullanılır?",
         answers: {
-            a: "var",
+            a: "function",
             b: "let",
             c: "const",
             d: "define"
@@ -38,16 +38,6 @@ const questions = [
             d: "Santimetre (cm)"
         },
         correctAnswer: "a"
-    },
-    {
-        question: "JavaScript'te 'map()' fonksiyonu ne işe yarar?",
-        answers: {
-            a: "Dizi elemanlarını filtrelemek",
-            b: "Dizi elemanları üzerinde döngü oluşturmak",
-            c: "Dizi elemanlarına belirli bir işlemi uygulamak",
-            d: "Dizi elemanlarını sıralamak"
-        },
-        correctAnswer: "c"
     },
     {
         question: "Bootstrap ile gelen ikon kümesi nedir?",
@@ -90,16 +80,6 @@ const questions = [
         correctAnswer: "c"
     },
     {
-        question: "CSS'te bir elemente uygulanan 'padding' özelliği hangi birimle ölçülür?",
-        answers: {
-            a: "Piksel (px)",
-            b: "Em",
-            c: "Yüzde (%)",
-            d: "Santimetre (cm)"
-        },
-        correctAnswer: "a"
-    },
-    {
         question: "JavaScript'te 'localStorage' nedir?",
         answers: {
             a: "Veritabanı yönetim sistemi",
@@ -108,16 +88,6 @@ const questions = [
             d: "CSS kütüphanesi"
         },
         correctAnswer: "b"
-    },
-    {
-        question: "React.js'te 'state' nedir?",
-        answers: {
-            a: "Bir şehir",
-            b: "Bir fonksiyon",
-            c: "Bir durum nesnesi",
-            d: "Bir sayfa"
-        },
-        correctAnswer: "c"
     },
     {
         question: "Hangi HTML etiketi metin içeriğini italik yapar?",
@@ -180,36 +150,6 @@ const questions = [
         correctAnswer: "b"
     },
     {
-        question: "JavaScript'te 'spread' operatörü hangi amaçla kullanılır?",
-        answers: {
-            a: "Dizi ve nesneleri birleştirmek",
-            b: "Döngü oluşturmak",
-            c: "Asenkron işlemleri yönetmek",
-            d: "Değişken tanımlamak"
-        },
-        correctAnswer: "a"
-    },
-    {
-        question: "CSS'te 'z-index' özelliği ne işe yarar?",
-        answers: {
-            a: "Zamanı kontrol etmek",
-            b: "Z-index değerini belirlemek",
-            c: "Zarif efektler eklemek",
-            d: "Zorlu sorunları çözmek"
-        },
-        correctAnswer: "b"
-    },
-    {
-        question: "React.js'te 'props' nedir?",
-        answers: {
-            a: "Bir programlama dili",
-            b: "Bir state nesnesi",
-            c: "Bir durum değişkeni",
-            d: "Bir bileşen aracılığıyla iletilen veri"
-        },
-        correctAnswer: "d"
-    },
-    {
         question: "HTML5 ile birlikte gelen yeni form elemanlarından biri nedir?",
         answers: {
             a: "&ltform&gt",
@@ -250,16 +190,6 @@ const questions = [
         correctAnswer: "c"
     },
     {
-        question: "React.js'te 'component lifecycle' nedir?",
-        answers: {
-            a: "Bir bileşenin doğum, yaşam ve ölüm aşamaları",
-            b: "Bir bileşenin görünen yüzü",
-            c: "Bir bileşenin konumu",
-            d: "Bir bileşenin dış görünüşü"
-        },
-        correctAnswer: "a"
-    },
-    {
         question: "CSS'te bir elementin konumunu belirlemek için kullanılan özellik nedir?",
         answers: {
             a: "position",
@@ -268,15 +198,5 @@ const questions = [
             d: "positioning"
         },
         correctAnswer: "a"
-    },
-    {
-        question: "JavaScript'te 'closure' nedir?",
-        answers: {
-            a: "Fonksiyonu kapatma işlemi",
-            b: "Kodun sonlanması",
-            c: "Döngüyü durdurma",
-            d: "Dış kapsam değişkenlerine erişim sağlayan bir yapı"
-        },
-        correctAnswer: "d"
     }
 ];

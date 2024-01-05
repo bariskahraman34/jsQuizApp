@@ -150,7 +150,7 @@ let countdown;
 let isOptionSelected = false;
 
 function startCountdown(){
-    let timeLeft = 10;
+    let timeLeft = 30;
     countdown = setInterval(function(){
         if(timeLeft == 0){
             clearInterval(countdown);
