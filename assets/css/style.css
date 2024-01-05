@@ -148,6 +148,9 @@ body{
     left: 50%;
     z-index: 100;
     transform: translate(-50%,-50%);
+    width: 200px;
+    transition: all .5s ease;
+    box-shadow: 0px;
 }
 
 .question-number{
@@ -212,4 +215,9 @@ body{
 .disabled-option{
     background-color: #EBEBE4;
     color: #C6C6C6;
+}
+
+.start-btn:hover{
+    width: 300px;
+    box-shadow: 5px 5px 38px 25px rgba(305, 130, 3, .5);
 }
