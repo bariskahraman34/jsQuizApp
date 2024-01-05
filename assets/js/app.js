@@ -5,11 +5,14 @@ const questionNumber = document.querySelector('.question-number');
 const nextBtn = document.querySelector('.next-btn');
 const btnText = document.querySelector('.button-text');
 const optionList = document.querySelector('.option-list');
-const finishQuizBtn = document.querySelector('.quiz-off'); 
+const finishQuizBtn = document.querySelector('.quiz-off');
+const scoreContainer = document.querySelector('.score');
 
 let currentQuestion = 1;
+let score = 0;
 
 nextBtn.addEventListener('click',function(){
+    nextBtn.setAttribute('disabled','disabled');
     currentQuestion++
     questionNumber.innerHTML = currentQuestion;
     if(currentQuestion == questions.length){
@@ -17,16 +20,24 @@ nextBtn.addEventListener('click',function(){
         finishQuizBtn.style.display = "block"
         finishQuizBtn.addEventListener('click',function(){
             quizContainer.classList.remove("active");
-            startQuiz();
+            scoreContainer.classList.add("active");
+            console.log(score);
+            scoreResult();
         })
+    }
+    const optionContainer = document.querySelectorAll('.option-container');
+    for (const option of optionContainer) {
+        option.classList.remove('disabled-option');
     }
     getQuestions();
 })
 
 function startQuiz(){
+    score = 0;
     startQuizBtn.style.display = "block";
+    scoreContainer.style.display = "none";
     startQuizBtn.addEventListener('click',function(){
-        nextBtn.style.display = "block";
+        nextBtn.setAttribute('disabled','disabled');
         finishQuizBtn.style.display = "none";
         startQuizBtn.style.display = "none";
         currentQuestion = 1;
@@ -36,6 +47,11 @@ function startQuiz(){
         btnText.textContent = "Sonraki Soru";
         getQuestions();
     })
+
+}
+
+function scoreResult(){
+    scoreContainer.style.display = "flex";
 
 }
 
@@ -59,6 +75,7 @@ function getQuestions(){
                     ${question.answers.a}
                 </span>
             </div>
+            <span class="icon"></span>
         </div>
         <div class="option-container">
             <div class="option-content">
@@ -67,6 +84,7 @@ function getQuestions(){
                     ${question.answers.b}
                 </span>
             </div>
+            <span class="icon"></span>
         </div>
         <div class="option-container">
             <div class="option-content">
@@ -75,6 +93,7 @@ function getQuestions(){
                     ${question.answers.c}
                 </span>
             </div>
+            <span class="icon"></span>
         </div>
         <div class="option-container">
             <div class="option-content">
@@ -83,17 +102,29 @@ function getQuestions(){
                     ${question.answers.d}
                 </span>
             </div>
+            <span class="icon"></span>
         </div>
         `
         // console.log(Object.keys(question.answers).map(key => ({key, value:question.answers[key]})));
         const optionText = document.querySelectorAll('.option-text');
         const optionContainer = document.querySelectorAll('.option-container');
+        const icon = document.querySelectorAll('.icon')
         for (let i = 0 ; i < optionContainer.length ; i++ ) {
             // console.log(answer.key)
             optionContainer[i].addEventListener('click',function(){
                 // console.log(optionText[i].previousElementSibling.id);
                 if(optionText[i].previousElementSibling.id == question.correctAnswer){
-                    console.log("Correct");
+                    optionContainer[i].style.background = "#28a745";
+                    icon[i].innerHTML = '<i class="fa-solid fa-check"></i>';
+                    nextBtn.removeAttribute('disabled','disabled');
+                    score++;
+                }else{
+                    optionContainer[i].style.background = "#dc3545";
+                    icon[i].innerHTML = '<i class="fa-solid fa-xmark">';
+                    nextBtn.removeAttribute('disabled','disabled');
+                }
+                for (const option of optionContainer) {
+                    option.classList.add('disabled-option');
                 }
             })
         }
