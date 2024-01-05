@@ -54,7 +54,7 @@ function getQuestions(){
         `
         <div class="option-container">
             <div class="option-content">
-                <span class="option">A:</span>
+                <span class="option" id="a">A:</span>
                 <span class="option-text">
                     ${question.answers.a}
                 </span>
@@ -62,7 +62,7 @@ function getQuestions(){
         </div>
         <div class="option-container">
             <div class="option-content">
-                <span class="option">B:</span>
+                <span class="option" id="b">B:</span>
                 <span class="option-text">
                     ${question.answers.b}
                 </span>
@@ -70,7 +70,7 @@ function getQuestions(){
         </div>
         <div class="option-container">
             <div class="option-content">
-                <span class="option">C:</span>
+                <span class="option" id="c">C:</span>
                 <span class="option-text">
                     ${question.answers.c}
                 </span>
@@ -78,14 +78,26 @@ function getQuestions(){
         </div>
         <div class="option-container">
             <div class="option-content">
-                <span class="option">D:</span>
+                <span class="option" id="d">D:</span>
                 <span class="option-text">
                     ${question.answers.d}
                 </span>
             </div>
         </div>
-        
         `
+        // console.log(Object.keys(question.answers).map(key => ({key, value:question.answers[key]})));
+        const optionText = document.querySelectorAll('.option-text');
+        const optionContainer = document.querySelectorAll('.option-container');
+        for (let i = 0 ; i < optionContainer.length ; i++ ) {
+            // console.log(answer.key)
+            optionContainer[i].addEventListener('click',function(){
+                // console.log(optionText[i].previousElementSibling.id);
+                if(optionText[i].previousElementSibling.id == question.correctAnswer){
+                    console.log("Correct");
+                }
+            })
+        }
+
     }
 }
 
