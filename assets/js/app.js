@@ -62,7 +62,11 @@ function scoreResult(){
     quit.addEventListener('click',function(){
         location.reload();
     })
-    scoreResultContent.innerText = `Toplam ${questions.length} Sorudan ${score} Doğru Cevap Verdiniz !`
+    scoreResultContent.innerText = 
+    `
+    Toplam ${questions.length} Sorudan ${score} Doğru Cevap Verdiniz !
+    Toplam Puanınız : ${(100/questions.length)*score}/100
+    `
     scoreContainer.style.display = "flex";
 
 }
@@ -163,13 +167,12 @@ function startCountdown(){
             }
         }else if(isOptionSelected){
             clearInterval(countdown);
-            timeLeft = 10;
+            timeLeft = 30;
         }else{
             timer.innerHTML = `Kalan Süre: ${timeLeft}`;
             timer.style.background = "#28a745";
             timeLeft--;
         }
-        console.log(timeLeft)
     },1000)
 }
 
