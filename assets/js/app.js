@@ -8,6 +8,7 @@ const optionList = document.querySelector('.option-list');
 const finishQuizBtn = document.querySelector('.quiz-off');
 const scoreContainer = document.querySelector('.score');
 const timer = document.querySelector('.timer');
+const timeLine = document.querySelector('.time-line');
 
 let currentQuestion = 1;
 let score = 0;
@@ -154,7 +155,8 @@ let countdown;
 let isOptionSelected = false;
 
 function startCountdown(){
-    let timeLeft = 30;
+    let timeLeft = 3000;
+    let timerCounter = .2;
     countdown = setInterval(function(){
         if(timeLeft == 0){
             clearInterval(countdown);
@@ -165,15 +167,17 @@ function startCountdown(){
             for (const option of optionContainer) {
                 option.classList.add('disabled-option');
             }
+            timeLine.style.width = `${timerCounter * timeLeft}px`;
         }else if(isOptionSelected){
             clearInterval(countdown);
-            timeLeft = 30;
+            timeLeft = 3000;
         }else{
-            timer.innerHTML = `Kalan Süre: ${timeLeft}`;
+            timer.innerHTML = `Kalan Süre: ${Math.ceil(timeLeft/100)}`;
             timer.style.background = "#28a745";
+            timeLine.style.width = `${timerCounter * timeLeft}px`;
             timeLeft--;
         }
-    },1000)
+    },10)
 }
 
 
