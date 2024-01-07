@@ -89,7 +89,7 @@ function getQuestions(){
         `
         <div class="option-container">
             <div class="option-content">
-                <span class="option" id="a">A:</span>
+                <span class="option" id="a">A</span>
                 <span class="option-text">
                     ${question.answers.a}
                 </span>
@@ -98,7 +98,7 @@ function getQuestions(){
         </div>
         <div class="option-container">
             <div class="option-content">
-                <span class="option" id="b">B:</span>
+                <span class="option" id="b">B</span>
                 <span class="option-text">
                     ${question.answers.b}
                 </span>
@@ -107,7 +107,7 @@ function getQuestions(){
         </div>
         <div class="option-container">
             <div class="option-content">
-                <span class="option" id="c">C:</span>
+                <span class="option" id="c">C</span>
                 <span class="option-text">
                     ${question.answers.c}
                 </span>
@@ -116,7 +116,7 @@ function getQuestions(){
         </div>
         <div class="option-container">
             <div class="option-content">
-                <span class="option" id="d">D:</span>
+                <span class="option" id="d">D</span>
                 <span class="option-text">
                     ${question.answers.d}
                 </span>
