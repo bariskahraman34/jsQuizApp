@@ -33,7 +33,7 @@ const questions = [
         question: "CSS'te bir elemente uygulanan 'margin' özelliği hangi birimle ölçülür?",
         answers: {
             a: "Piksel (px)",
-            b: "Em",
+            b: "viev-width (vw)",
             c: "Yüzde (%)",
             d: "Santimetre (cm)"
         },
@@ -92,7 +92,7 @@ const questions = [
     {
         question: "Hangi HTML etiketi metin içeriğini italik yapar?",
         answers: {
-            a: "&lti&gt",
+            a: "&ltcanvas&gt",
             b: "&ltitalic&gt",
             c: "&ltem&gt",
             d: "&ltitalics&gt"
