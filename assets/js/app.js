@@ -144,6 +144,12 @@ function getQuestions(){
                     icon[i].innerHTML = '<i class="fa-solid fa-xmark">';
                     nextBtn.removeAttribute('disabled','disabled');
                     optionContainer[i].style.color = "white";
+                    for (let j = 0 ; j < optionContainer.length ; j++) {
+                        if(optionText[j].previousElementSibling.id == question.correctAnswer){
+                            optionContainer[j].style.background = "green";
+                        }
+                    }
+
                 }
                 for (const option of optionContainer) {
                     option.classList.add('disabled-option');

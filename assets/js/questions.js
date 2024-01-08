@@ -4,7 +4,7 @@ const questions = [
         answers: {
             a: "function",
             b: "let",
-            c: "const",
+            c: "async",
             d: "define"
         },
         correctAnswer: "b"
