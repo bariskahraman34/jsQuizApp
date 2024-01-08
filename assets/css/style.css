@@ -262,3 +262,12 @@ body{
     width: 300px;
     box-shadow: 5px 5px 38px 25px rgba(103, 58, 183, .5);
 }
+
+@media (max-width:480px){
+    .quiz-container, .score{
+        width: 350px;
+    }
+    .time-line-container{
+        width: 350px;
+    }
+}

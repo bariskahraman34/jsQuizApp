@@ -155,10 +155,14 @@ function getQuestions(){
 
 let countdown;
 let isOptionSelected = false;
+let mediaQueryWidth = window.matchMedia("(max-width:480px)");
 
 function startCountdown(){
     let timeLeft = 3000;
     let timerCounter = .2;
+    if(mediaQueryWidth.matches){
+        timerCounter = 0.11666666667
+    }
     countdown = setInterval(function(){
         if(timeLeft == 0){
             clearInterval(countdown);
